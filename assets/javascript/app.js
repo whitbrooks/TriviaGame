@@ -1,65 +1,95 @@
 // VARIABLES
-var questionOne = {
-    question1: "What is the most visited park in the National Park System?",
-    optionA: "Yosemite National Park",
-    optionB: "Yellowstone National Park",
-    optionC: "Zion National Park",
-    optionD: "Great Smoky Mountains National Park"
-};
 
-var questionTwo = {
-    question2: "What shape is the emblem of the National Park Service?",
-    optionA: "Arrowhead",
-    optionB: "Diamond",
-    optionC: "Log Cabin",
-    optionD: "Redwood tree"
-};
+    var questionOne = {
+        question: "What is the most visited park in the National Park System?",
+        optionA: "Yosemite National Park",
+        optionB: "Yellowstone National Park",
+        optionC: "Zion National Park",
+        optionD: "Great Smoky Mountains National Park"
+    };
 
-var questionThree = {
-    question3: "Which of the following exists within the boundaries of a national park?",
-    optionA: "The highest point in North America",
-    optionB: "The longest cave system in the world",
-    optionC: "The deepest lake in the US",
-    optionD: "All of the above"
-}
+    var questionTwo = {
+        question: "What shape is the emblem of the National Park Service?",
+        optionA: "Arrowhead",
+        optionB: "Diamond",
+        optionC: "Log Cabin",
+        optionD: "Redwood tree"
+    };
 
-var questionFour = {
-    question4: "Yellowstone National Park's geothermal Morning Glory Pool has changed color over the years. What is responsible for the change?",
-    optionA: "Bird droppings",
-    optionB: "Sulfur evaporation",
-    optionC: "Trash",
-    optionD: "Climate change"
-}
+    var questionThree = {
+        question: "Which of the following exists within the boundaries of a national park?",
+        optionA: "The highest point in North America",
+        optionB: "The longest cave system in the world",
+        optionC: "The deepest lake in the US",
+        optionD: "All of the above"
+    };
 
-var questionFive = {
-    question5: "Which of the following presidents more than doubled the acreage of the National Park System?",
-    optionA: "Calvin Coolidge",
-    optionB: "Richard Nixon",
-    optionC: "Jimmy Carter",
-    optionD: "George H.W. Bush"
-}
+    var questionFour = {
+        question: "Yellowstone National Park's geothermal Morning Glory Pool has changed color over the years. What is responsible for the change?",
+        optionA: "Bird droppings",
+        optionB: "Sulfur evaporation",
+        optionC: "Trash",
+        optionD: "Climate change"
+    };
+
+    var questionFive = {
+        question: "Which of the following presidents more than doubled the acreage of the National Park System?",
+        optionA: "Calvin Coolidge",
+        optionB: "Richard Nixon",
+        optionC: "Jimmy Carter",
+        optionD: "George H.W. Bush"
+    };
+
+    var questionSet = [questionOne, questionTwo, questionThree, questionFour, questionFive];
+
+    // store variable for user selection
+    var userResponse = $(".container").on("click", function() {
+        console.log(userResponse);
+    });
+
+    // store correct and incorrect answers
+    var right = 0;
+    var wrong = 0;
 
 // FUNCTIONS
 
-function nextQuestion() {
 
-    // if current question is questionOne, set form to questionTwo, etc.
+// display question and answers
+function display() {
+    $("#question").html(questionSet[i].question);   
+    $("#one").html(questionSet[i].optionA);   
+    $("#two").html(questionSet[i].optionB);   
+    $("#three").html(questionSet[i].optionC);   
+    $("#four").html(questionSet[i].optionD); 
+    console.log(questionSet[i].question);
 
-    if 
+    }
 
+// determine if answer selected is correct
+function rightAnswer() {
+    if (userResponse == questionOne.optionD || questionTwo.optionA || questionThree.optionD || questionFour.optionC || questionFive.optionC) {
+    right++;
+    alert("correct!");
+    console.log(wins);
+    } else if (userResponse != questionOne.optionD || questionTwo.optionA || questionThree.optionD || questionFour.optionC || questionFive.optionC){
+        wrong++
+        alert("oops, incorrect!");
+    }
 }
 
-function tenSeconds() {
-    
-    // if question is answered correctly, alert "correct!"
-    
-    // else alert "time's up!"
+// alert user when time's up
+function timesUp() {
     alert("time's up!")
-
-    // set form to next question
-    nextQuestion();
+    
 }
 
+
+// end quiz and summarize score
+function endQuiz() {
+
+// start over button
+
+}
 
 
 
@@ -68,11 +98,11 @@ function tenSeconds() {
 // load html before running script
 $(document).ready(function() {
 
-    setTimeout(tenSeconds, 10000);
+    // start the clock and quiz
+
+    $("#start").click(function(){
+        display(i=0);
+    });
 
 
-
-
-
-
-}
+});

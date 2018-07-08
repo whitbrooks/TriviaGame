@@ -71,6 +71,7 @@ body {
 }
 
 #header {
+    color: black;
     background: transparent;
     text-align: center;
     padding: 25px;
@@ -88,10 +89,10 @@ body {
 
 h2 {
     color: coral;
-    text-shadow: 2px 2px 8px black;
+    text-shadow: 2px 2px 15px black;
     font-weight: bold;
-    margin: 10px;
 }
+
 
 #time {
     color: white;
@@ -100,8 +101,32 @@ h2 {
     font-weight: bolder
 }
 
-#quiz {
+#start {
     color: white;
-    background-color: coral;
-    padding: 10px;
+    text-shadow: 2px 2px 15px black;
+}
+
+#question {
+    color: white;
+    text-shadow: 2px 2px 15px black;
+}
+
+#one {
+    color: white;
+    text-shadow: 2px 2px 15px black;
+}
+
+#two {
+    color: white;
+    text-shadow: 2px 2px 15px black;
+}
+
+#three {
+    color: white;
+    text-shadow: 2px 2px 15px black;
+}
+
+#four {
+    color: white;
+    text-shadow: 2px 2px 15px black;
 }

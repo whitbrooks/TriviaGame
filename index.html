@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    
+    
     <title>National Park Trivia</title>
   </head>
   
@@ -27,33 +29,67 @@
         <div class="row">
           <h2>You'll have 10 seconds to answer each question. Good luck!</h2>
         </div>
-      
+
+        <br>
+
+        <div class="row">
+          <button type="button" class="btn btn-danger" id="start">Click to Start</button>
+        </div>
+        
+        <br>
+
         <div class="row">
           <div class="col-sm-3 col-md-1" id="time">00</div>
         </div>
         
         <br>
 
-        <div class="row" id="quiz">
-          <div id="question"></div>
-          <br>
-          <label class="container">One
+        <div class="row" class="col-md-12" id="question">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa culpa provident modi ducimus veritatis quam voluptates sint id. Delectus enim aspernatur eveniet pariatur dolorem id eligendi ipsam, earum aut dicta?</div>
+        
+        <br>
+
+        <div class="row">
+          <label class="container">
             <input type="radio" checked="checked" name="radio">
             <span class="checkmark"></span>
           </label>
-          <label class="container">Two
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-          </label>
-          <label class="container">Three
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-          </label>
-          <label class="container">Four
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-          </label>
+          <div id="one">test</div>
         </div>
+        
+        <br>
+
+        <div class="row">
+          <label class="container">
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <div id="two"></div>
+        </div>  
+        
+        <br>
+
+        <div class="row">
+          <label class="container">
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <div id="three"></div>
+        </div>
+
+        <br>
+
+        <div class="row">
+          <label class="container">
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <div id="four"></div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
       </div>
   
   </body>
@@ -65,5 +101,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
   </body>
 </html>
