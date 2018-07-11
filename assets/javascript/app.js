@@ -43,8 +43,8 @@
     var questionSet = [questionOne, questionTwo, questionThree, questionFour, questionFive];
 
     // store variable for user selection
-    var userResponse = $(".container").on("click", function() {
-        console.log(userResponse);
+    var userResponse = $("input").on("change", function() {
+        console.log($( "input:checked" ).val());
     });
 
     // store correct and incorrect answers
@@ -56,11 +56,11 @@
 
 // display question and answers
 function display() {
-    $("#question").html(questionSet[i].question);   
-    $("#one").html(questionSet[i].optionA);   
-    $("#two").html(questionSet[i].optionB);   
-    $("#three").html(questionSet[i].optionC);   
-    $("#four").html(questionSet[i].optionD); 
+    $("#question").append(questionSet[i].question);   
+    $("#one").append(questionSet[i].optionA);   
+    $("#two").append(questionSet[i].optionB);   
+    $("#three").append(questionSet[i].optionC);   
+    $("#four").append(questionSet[i].optionD); 
     console.log(questionSet[i].question);
 
     }

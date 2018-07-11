@@ -1,6 +1,6 @@
 /* RADIO BUTTONS */
 /* Customize the label (the container) */
-.container {
+.label {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -14,7 +14,7 @@
 }
 
 /* Hide the browser's default radio button */
-.container input {
+.label input {
     position: absolute;
     opacity: 0;
 }
@@ -31,12 +31,12 @@
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.label:hover input ~ .checkmark {
     background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.label input:checked ~ .checkmark {
     background-color: #2196F3;
 }
 
@@ -48,12 +48,12 @@
 }
 
 /* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
+.label:hover input:checked ~ .checkmark:after {
     display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.container .checkmark:after {
+.label .checkmark:after {
     top: 9px;
     left: 9px;
     width: 8px;
@@ -109,6 +109,7 @@ h2 {
 #question {
     color: white;
     text-shadow: 2px 2px 15px black;
+    font-size: 22px;
 }
 
 #one {
