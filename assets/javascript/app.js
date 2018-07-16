@@ -1,5 +1,5 @@
 // VARIABLES
-
+    
     var questionOne = {
         question: "What is the most visited park in the National Park System?",
         optionA: "Yosemite National Park",
@@ -42,11 +42,7 @@
 
     var questionSet = [questionOne, questionTwo, questionThree, questionFour, questionFive];
 
-    // store variable for user selection
-    var userResponse = $("input").on("change", function() {
-        console.log($( "input:checked" ).val());
-    });
-
+  
     // store correct and incorrect answers
     var right = 0;
     var wrong = 0;
@@ -61,21 +57,22 @@ function display() {
     $("#two").append(questionSet[i].optionB);   
     $("#three").append(questionSet[i].optionC);   
     $("#four").append(questionSet[i].optionD); 
-    console.log(questionSet[i].question);
 
-    }
+    };
+
 
 // determine if answer selected is correct
-function rightAnswer() {
-    if (userResponse == questionOne.optionD || questionTwo.optionA || questionThree.optionD || questionFour.optionC || questionFive.optionC) {
+function checkAnswer() {
+    if (userResponse === questionOne.optionD || questionTwo.optionA || questionThree.optionD || questionFour.optionC || questionFive.optionC) {
     right++;
     alert("correct!");
-    console.log(wins);
-    } else if (userResponse != questionOne.optionD || questionTwo.optionA || questionThree.optionD || questionFour.optionC || questionFive.optionC){
+    console.log(right);
+    } else if (userResponse !== questionOne.optionD || questionTwo.optionA || questionThree.optionD || questionFour.optionC || questionFive.optionC) {
         wrong++
         alert("oops, incorrect!");
+        console.log(wrong);
     }
-}
+};
 
 // alert user when time's up
 function timesUp() {
@@ -102,7 +99,14 @@ $(document).ready(function() {
 
     $("#start").click(function(){
         display(i=0);
+
     });
 
+    userResponse = $("input").on("change", function() {
+        console.log($( "input:checked" ).val());
+        checkAnswer();
+        reset();
+        display(i=1);
+    });
 
 });
